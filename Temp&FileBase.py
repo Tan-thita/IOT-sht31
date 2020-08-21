@@ -20,9 +20,9 @@ cTemp = -45 + (175 * temp / 65535.0) #formula mentioned in datasheet
 fTemp = -49 + (315 * temp / 65535.0) #formula mentioned in datasheet
 humidity = 100 * (data[3] * 256 + data[4]) / 65535.0
 # Print the readings and show it RPI OS CLI
-print "Temperature in Celsius is : %.2f C" %cTemp
-print "Temperature in Fahrenheit is : %.2f F" %fTemp
-print "Relative Humidity is : %.2f %%RH" %humidity
+print("Temperature in Celsius is : %.2f C" %cTemp)
+print("Temperature in Fahrenheit is : %.2f F" %fTemp)
+print("Relative Humidity is : %.2f %%RH" %humidity)
 time.sleep(5) #5milliseconds
 #store the Host ID(provided in firebase database) in variable where you want to send the real time sensor data.  
 firebase= firebase.FirebaseApplication('HOST ID')
